@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://kit.fontawesome.com/9055024f82.js" crossorigin="anonymous"></script>
+
+        <title>Eastern Suburbs Lawnmowing</title>
+
+        <link rel="icon" type="image/x-icon" href="logo.jpg">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+
+                box-sizing: border-box;
+
+                color: white;
+                font-family: Arial;
+            }
+
+            body {
+                background: green;
+            }
+
+            header {
+                position: relative;
+
+                height: calc(100vh - 100px);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 100px;
+
+                padding: 0 100px;
+            }
+
+            header .bg {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+
+                overflow: hidden;
+                object-fit: cover;
+
+                filter: blur(3px);
+
+                z-index: -1;
+            }
+
+            header .title-text {
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            header .title-text .business-name {
+                font-size: 4em;
+            }
+
+            header .title-text .location {
+                display: flex;
+                gap: 0.5em;
+                font-size: 1.25em;
+            }
+
+            header .logo {
+                height: 75%;
+                aspect-ratio: 1;
+                border-radius: 9999px;
+
+                object-fit: cover;
+
+                filter: drop-shadow(0 10px 10px #00000080);
+            }
+
+            .banner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                height: 100px;
+
+                z-index: 10000;
+
+                opacity: 0.5;
+            }
+
+            .banner img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+                opacity: 0.5;
+            }
+
+            .reviews {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 100px;
+
+                padding: 100px 0;
+                padding-top: 200px;
+
+                z-index: -1;
+            }
+
+            .reviews .review-container {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .reviews .review-container .review {
+                width: 75%;
+
+                background-color: darkgreen;
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                padding: 25px;
+            }
+
+            .reviews .review-container .review .stars {
+                margin-bottom: 10px;
+            }
+
+            .reviews .review-container .review .stars i {
+                font-size: 1.5em;
+            }
+
+            .reviews .review-container .review .author {
+                color: lightgrey;
+            }
+
+            footer {
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                padding: 50px 0;
+
+                background-color: darkgreen;
+            }
+
+            footer .phone {
+                display: flex;
+                gap: 10px;
+            }
+
+            footer .developer a {
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            @media (max-width: 1100px) {
+                header {
+                    flex-direction: column;
+                    height: unset;
+                    padding: 100px 0;
+
+                    text-align: center;
+                }
+
+                header .title-text {
+                    align-items: center;
+                }
+
+                header .logo {
+                    height: unset;
+                    width: 75%;
+                }
+            }
+
+            @media (max-width: 800px) {
+                body {
+                    font-size: 0.75rem;
+                }
+
+                header .title-text .business-name {
+                    font-size: 2em;
+                }
+
+                .reviews {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <img class="bg" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Closeup_of_lawn_grass.jpg" alt="Background">
+                <div class="title-text">
+                    <h1 class="business-name">Eastern Suburbs Lawnmowing</h1>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>7 Waterton Ave, Matraville NSW 2036</p>
+                    </div>
+                </div>
+                <img class="logo" src="logo.jpg" alt="Logo">
+            </header>
+            <section class="reviews">
+                <div class="banner">
+                    <img src="banner.png" alt="Banner">
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>We used eastern suburbs lawnmowing for the first time and were very happy.<br>And great phone manner, fast, service, very clean and reasonably priced.<br>We will use them again, and highly recommend them.</p>
+                        </div>
+                        <div class="author">John Viridis</div>
+                    </div>
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>Kharis did an excellent job for our lawn and garden. He&apos;s very professional, quick and understand our needs for the garden and able to work out the best that suits the environment within our budget.<br>Highly recommend him for your lawn and gardening works.</p>
+                        </div>
+                        <div class="author">Hanging Tree Wines</div>
+                    </div>
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>I highly recommend Kharis and his services to anyone who needs lawnmowing or garden maintenance to be done in the area. He did such a great job cutting my overgrown grass and trees, responded to my request the  next day and was a pleasure to deal with.</p>
+                        </div>
+                        <div class="author">Marian Charvat</div>
+                    </div>
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>We used the boys from Eastern Suburb Lawnmowing recently, for our block of units. They provide an outstanding service and the lawns have never looked better. Will definately recommend and we will be definately using them again. Big thanks to Kharis and his team 😁</p>
+                        </div>
+                        <div class="author">Jason Quigley</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <p>+61 403 500 838</p>
+            </div>
+            <div class="developer">
+                <p>Built by <a href="https://16bitdevelopment.com" target="_blank">16 Bit Development</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
